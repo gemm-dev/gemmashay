@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'Source Sans Pro';
-  background: #403A3E;
+  background-color: #161419;
 }
 
 .btn-xl {
@@ -21,7 +21,7 @@ body {
 .content-section {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
-  background: #403A3E;
+  background: #161419;
 }
 
 .content-section-heading h2 {
@@ -46,7 +46,7 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Map */
+/* Map 
 .map {
   height: 30rem;
 }
@@ -84,7 +84,7 @@ h6 {
 
 .scroll-to-top i {
   font-weight: 800;
-}
+} */
 
 .masthead {
   min-height: 30rem;
@@ -313,13 +313,13 @@ footer.footer .social-link {
   width: 4rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
-  background-color: #1D809F;
+  background-color: #161419;
   transition: background-color 0.15s ease-in-out;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 footer.footer .social-link:hover {
-  background-color: #155d74;
+  background: #161419;
   text-decoration: none;
 }
 
