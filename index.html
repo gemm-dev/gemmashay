@@ -41,10 +41,10 @@
           <a class="js-scroll-trigger" href="#about">About</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#phys">Computational Physics</a>
+          <a class="js-scroll-trigger" href="#projects">Projects</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#projects">Projects</a>
+          <a class="js-scroll-trigger" href="#physcs">Computational Physics</a>
         </li>
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#contact">Contact</a>
@@ -65,7 +65,7 @@
     </header>
 
     <!-- About -->
-    <section class="content-section bg-light" id="about">
+    <section class="content-section bg-primary" id="about">
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-10 mx-auto">
@@ -138,8 +138,8 @@
       </div>
     </section>-->
 
-    <!-- Portfolio -->
-    <section class="content-section" id="portfolio">
+    <!-- Projects -->
+    <section class="content-section" id="projects">
       <div class="container">
         <div class="content-section-heading text-center">
         <!--  <h3 class="text-secondary mb-0">Portfolio</h3> -->
@@ -194,53 +194,58 @@
       </div>
     </section>
     
-        <!-- Portfolio -->
+        <!-- Computational Physics -->
     <section class="content-section" id="physics">
       <div class="container">
         <div class="content-section-heading text-center">
         <!--  <h3 class="text-secondary mb-0">Portfolio</h3> -->
           <h2 class="mb-5">Computational Physics</h2>
         </div>
+        
         <div class="row no-gutters">
           <div class="col-lg-6">
-            <a class="portfolio-item" href="#">
+            <a class="portfolio-item" href="/taylor">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Stationary</h2>
-                  <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                  <h2>Taylor Series Expansion</h2>
+                  <p class="mb-0">A simple program to determine to what order a Taylor series expansion needs 
+                    to be carried to agree with the exact result within a fractional tolerence.</p>
                 </span>
               </span>
               <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
             </a>
           </div>
+          
           <div class="col-lg-6">
-            <a class="portfolio-item" href="#">
+            <a class="portfolio-item" href="diffint">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Ice Cream</h2>
-                  <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                  <h2>Numerical Differentiation and Integration</h2>
+                  <p class="mb-0">A general purpose program that can calculate derivatives and integrals of any given function</p>
                 </span>
               </span>
               <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
             </a>
           </div>
+          
           <div class="col-lg-6">
-            <a class="portfolio-item" href="#">
+            <a class="portfolio-item" href="root">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Strawberries</h2>
-                  <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                  <h2>Root Finding</h2>
+                  <p class="mb-0">Finds the root of a function using the Bracket, Bisection, and Newton-Raphson methods.</p>
                 </span>
               </span>
               <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
             </a>
           </div>
+          
           <div class="col-lg-6">
-            <a class="portfolio-item" href="#">
+            <a class="portfolio-item" href="pendulum">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Workspace</h2>
-                  <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                  <h2>Pendulum Motion</h2>
+                  <p class="mb-0">Solving the pendulum equation of motion using the Euler and Runge-Kutta methods.</p>
                 </span>
               </span>
               <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
@@ -249,6 +254,83 @@
         </div>
       </div>
     </section>
+          
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="gravity">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Gravity in 2D</h2>
+                  <p class="mb-0">Simulates the motion of point-like objects subject to their mutual gravitational attraction.</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+          
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="shoot">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Schrodinger Equation</h2>
+                  <p class="mb-0">Implements the "shooting" method to solve the classic particle-in-a-box problem.</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+          
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="min">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Minimum Finding</h2>
+                  <p class="mb-0">Finds the minimum of a 1-D function using bracketing and a golden-section search.</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+          
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="anneal">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Simulated Annealing</h2>
+                  <p class="mb-0">Implements a simulated annealing algorithm (Metropolis-Hastings) to find the minimum of a given function.</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+          
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Interpolation</h2>
+                  <p class="mb-0">Interpolates unknown values of a specified data set using 
+                    simple linear interpolation and Lagrangian polynomial interpolation.</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+       
 
     <!-- Resume -->
    <section class="content-section bg-primary text-white">
@@ -265,7 +347,7 @@
         <h2 class="mb-4">Contact Info</h2>
         <p>
           Feel free to email gshay@wesleyan.edu for any inquiries.<br> 
-          You can also connect with me on linkedin or github below.       
+          You can also connect with me on LinkedIn or GitHub below.       
         </p>
       </div>
     </section>      
