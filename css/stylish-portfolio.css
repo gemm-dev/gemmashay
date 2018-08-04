@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'Roboto';
-  background-color: #161419;
+  background-color: #1C1A25;
 }
 
 .btn-xl {
@@ -21,7 +21,7 @@ body {
 .content-section {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
-  background: #161419;
+  background: #1C1A25;
 }
 
 .content-section-heading h2 {
@@ -364,7 +364,7 @@ a:hover, a:focus, a:active {
 }
 
 .bg-primary {
-  background-color: #161419 !important;
+  background-color: #1C1A25 !important;
 }
 
 .text-primary {
@@ -372,5 +372,5 @@ a:hover, a:focus, a:active {
 }
 
 .text-secondary {
-  color: #1D809F !important;
+  color: #fff !important;
 }
