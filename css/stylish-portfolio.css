@@ -38,6 +38,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  color: #fff;
 }
 
 .text-faded {
@@ -102,15 +103,17 @@ h6 {
   font-size: 4rem;
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
+    color: #fff;
   }
   .masthead h1 {
     font-size: 5.5rem;
-    color: white;
+    color: #fff;
   }
 }
 
