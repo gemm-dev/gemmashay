@@ -95,7 +95,7 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: /*linear-gradient(90deg, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 100%),*/ url("../img/bg-masthead.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-masthead.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -114,6 +114,7 @@ h6 {
   }
   .masthead h1 {
     font-size: 5.5rem;
+    color: #fff;
   }
 }
 
