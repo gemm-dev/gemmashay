@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: 'Source Sans Pro';
+  color: #fff;
 }
 
 .btn-xl {
@@ -42,7 +43,7 @@ h6 {
 }
 
 .text-faded {
-  color: rgba(255, 255, 255, 0.7);
+  color: color: #fff;
 }
 
 /* Map */
