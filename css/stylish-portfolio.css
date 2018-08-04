@@ -364,13 +364,13 @@ a:hover, a:focus, a:active {
 }
 
 .bg-primary {
-  background-color: #1D809F !important;
+  background-color: #161419 !important;
 }
 
 .text-primary {
-  color: #1D809F !important;
+  color: #fff !important;
 }
 
 .text-secondary {
-  color: #ecb807 !important;
+  color: #1D809F !important;
 }
