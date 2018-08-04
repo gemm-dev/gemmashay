@@ -9,13 +9,8 @@ html {
   height: 100%;
 }
 
-.text-center {
-  color: #fff;
-}
-
 body {
   font-family: 'Source Sans Pro';
-  color: #fff;
 }
 
 .btn-xl {
@@ -43,7 +38,6 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  color: #fff;
 }
 
 .text-faded {
@@ -108,6 +102,7 @@ h6 {
   font-size: 4rem;
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -115,7 +110,8 @@ h6 {
     height: 100vh;
   }
   .masthead h1 {
-    font-size: 5.5rem;
+    font-size: 2.2rem;
+    color: #fff;
   }
 }
 
