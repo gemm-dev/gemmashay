@@ -1,0 +1,35 @@
+This is the final "weekly assignment". It should be relatively short and simple. There is no template, but it should only take 20 or so lines of code. You may use whatever programming language you wish.
+
+The task is to implement a "simulated annealing" algorithm to find the minimum of the following function:
+
+f(x,y) = 3*(1-x)^2*exp(-x^2 - (y+1)^2) - 10*(x/5 - x^3 - y^5)*exp(-x^2-y^2) - 1/3*exp(-(x+1)^2 - y^2)
+
+where x and y are both between -10 and 10
+
+There are plenty of explanations of simulated annealing online, such as https://en.wikipedia.org/wiki/Simulated_annealing (note that the animation there has the algorithm looking for the maximum of a function, whereas you'll be looking for the minimum, but the idea is the same).
+
+To understand simulated annealing, imagine that you start with a random point (x,y) and want to find the minimum of the above function. One idea might be to pick a new random point (x',y') and only move to that point if f(x',y') is lower than f(x,y). If you keep repeating this, you should keep moving towards lower and lower values of f, thus approaching a minimum of the function.
+
+The problem is that the above reasoning only assures that you'll reach a LOCAL minimum....there may be an even lower minimum (the global minimum) somehwere else along the function, but to get there you needed to go over a maxixum in f first. What we need is some way to explore the entire function for a while before settling into a minimum, so that we have a better chance of finding the global minimum and not just a local minimum.
+
+To do this we borrow from nature: in metals and other systems with defects, one can heat the system, giving particles a chance to diffuse and reach lower potential energy states (i.e. less defects), and then cool the system to "lock" the system into that new equilibrium state.
+
+Similarly, in simulated annealing, we allow for the possibility of moving to a new point (x',y') such that f(x',y') is larger than f(x,y). The probability of doing this is determined by a "temperature" (T) which we slowly lower as we iterate through the loop. Thus over time, the probability of going to a "worse" point decreases and we eventually get "stuck" in whatever minimum we've found, which hopefully is the global minimum.
+
+To determine the probability of moving from (x,y) to (x',y') we use the same Metropolis algorithm we've seen before. That is, if f(x',y') < f(x,y) then we definitely make the move. If f(x,'y') > f(x,y) then we make the move with probability
+
+P = 1/[exp(f(x',y')-f(x,y))/T]
+
+To start the algorithm, you start with an initial point (x,y) (either chosen by your program, or from user input, or random). Then you will use two loops.
+
+The inner loop randomly picks a new point (x',y') (again both x and y are between -10 and 10) and moves your best guess of the minimum (x,y) to this new point according to the rules above. Since we're not dealing with an actual physical system, the starting value of the temperature, T, is somewhat arbitrary. For this problem, I've had success starting with 1, but also with 100. You'll want to do this 100-1000 times at each temperature.
+
+The outer loop is where the temperature is lowered. Again, there is freedom in how you do this. Some people just lower it 80-90% each time, some use a function that involves the logarithm, some vary the amount it's reduced as time goes on. You can run this loop a certain number of iterations, or until the temperature gets to some minimum value...again your choice.
+
+If you successfully implement this algorithm for the above function, you should find a minimum value somewhere around:
+
+x= 0.24, y= -1.64, f(x,y)= -6.55
+
+The assignment is to implement the simulated annealing algorithm for the given function. You can use any language you like. The function should output to a file the values of x, y, f(x,y), and T every so many iterations. For example, you may want to output values every time you change the temperature (so the number of lines in the output will be determined by the number of iterations through the outer loop). Or you may use some other method...the point is to see how the algorithm moves fairly easily over the whole function while T is high and then gets "stuck" in the minimum as T is lowered. Remember that the total number of iterations will be (number of iterations of inner loop) * (number of iterations of outer loop).
+
+You will need to upload your source code along with a copy of the output.

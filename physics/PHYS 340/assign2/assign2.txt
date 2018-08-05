@@ -1,0 +1,53 @@
+The purpose of this assignment is to write a relatively simple code
+from the ground up so that you gain some familiarity with the process.
+
+As you know, the exponential function can be expressed as a series
+expansion
+
+e^x = 1 + x + x^2/2 + ... + x^n/n! + ...
+
+The goal of this assignment is to determine to what order the Taylor
+series expansion needs to be carried to agree with the exact result
+within a fractional tolerence.  So that you use most of the important
+data types and the primary C directives, there are a very specific set
+of requirements for your code, which I outline below.
+
+1.  Your code should prompt the user for both the argument of the
+    exponential and the fractional tolerance.  The code should then
+    accept input from the user for these two quantities.
+
+2.  Calculate the first 100 terms of the expansion and store them in
+    an array.  This step would not be required normally, but I
+    specifically ask you to do it so that you are forced to deal with
+    an array and a 'for' loop.
+
+    You should be careful when calculating these terms, as both the
+    numerator (x^n) and denominator (n!) can become extremely large!
+    This could cause numerical overflows.  Such overflows can be
+    avoided by using the result from the previous term to get the next
+    term of the expansion.  Mathematically,
+
+    x^n/n! = x/n * x^(n-1)/(n-1)!
+
+    So we just need the first term to jumpstart the process, which we
+    know is 1.
+
+3.  Determine the number of terms in the expansion that are needed to
+    agree with the exact result within the fractional tolerance.  The
+    fractional error is
+
+	| expansion result - exact result | / exact result
+
+    The exponential function is 'exp'.  The absolute value of a decimal
+    number can be calculated using the 'fabs' function.  The 'abs'
+    function is only for integers!
+
+    Since you do not know how many terms you will need at the outset,
+    you should use a while loop to sum the terms of the expansion
+    until the stop criterion is reached.  You should also include a
+    check to be sure you do not go beyond the 100 terms that you have
+    calculated.
+
+4.  Print your result for the number of terms needed to the screen.  If
+    your calculation failed to converge in the 100 terms you calculated, 
+    print out that the calculation failed to converge.

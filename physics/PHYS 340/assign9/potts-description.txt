@@ -1,0 +1,104 @@
+The aim of this assignment is to simulate the 2-dimensional Potts Model
+via the Metropolis Monte-Carlo algorithm.  The Potts model is a
+generalization of the Ising model where spins can have q states, instead
+of just 2.
+
+This assignment takes a backward approach compared to recent
+assignments.  Rather than writing the subroutines that do the work, the
+subroutines are given to you and you must write the control code that
+calls everything correctly.  The subroutines can be found in the file
+'potts-subroutines.c', and contain subroutines to initialize spins, update
+spins, calculate energy, and calculate magnetization.
+
+Broadly speaking, the outline of the main routine is:
+
+1. Collect user input.
+2. Initialize spins (using provided subroutine).
+3. Loop over spin updates:
+   a. Update spins (using provided subroutine).
+   b. At user specified intervals, write out the current energy and
+   fraction of spins in each state (i.e., "magnetization); routines
+   to evaluate energy and magnetization are provided.
+4. At the end of the simulation, write out the current state of the system.
+
+There are specific guidelines you must follow, that I outline below.
+
+The size of the lattice should be 20x20.  Call these sizes Nx and Ny,
+and assign their values using a #define statement.  The maximum
+allowable value of q is 20, which we call Qmax.  Assign this also using
+a #define statement.
+
+There are certain specific variables that the subroutines must receive
+in order to function correctly.  These are:
+
+	- short spin[Nx][Ny]: the array of spins
+	- short q: the actual value of q, which is <= Qmax
+	- unsigned short seed[3]: this is the "seed" for the random number
+				  generator.  More about this later.
+	- double beta: inverse temperature
+	- double M[Qmax]: array storing the fraction of spins in each of the 
+	  	 	  q states, also called the magnetization
+
+At the beginning of your simulation, your code must prompt the user for
+the following items, IN ORDER:
+
+	- temperature
+	- number of spin updates
+	- number of steps between writing "measurements"
+	- number of states (q) -- error check that q<=Qmax
+
+Note that q is of type short.  To 'scanf' a short value, you need the
+format %hd (half an integer).  Hence, the scan would look like:
+     scanf("%hd", &q);    /* Do not forget the ampersand! */
+
+Before initializing the spins, I specifically require you set the value
+of the random number generator seed so that your code generates an
+expected sequence of pseudo-random numbers.  Thus cut and paste the
+following line:
+
+    seed[0] = 1294;  seed[1] = 794;   seed[2] = 5528;
+
+Start your loop over updates from 0.  In this loop, after the number
+of iterations that you specified between measurements, you must write
+several measurements.  An easy way to check if it is time to write is
+using the modulo operator, '%'.  For example,
+	if (n%n_measure == 0) { do stuff } 
+will only 'do stuff' after each n_measure iterations.  Convince
+yourself why.  Within the loop, the measurements might come before or
+after the update of spins; for consistency in grading, please put the
+measurements AFTER the update of spins.
+
+When measurement time comes, you must write to a file called
+"results.dat" the following information:
+
+current step     energy    M[0]     M[1] etc until..    M[q-1] 
+
+Thus, at the end of the run, your file will look something like:
+
+0       0.620000        0.245000        0.195000        0.240000        0.320000
+100     0.438750        0.242500        0.155000        0.427500        0.175000
+200     0.488750        0.272500        0.190000        0.215000        0.322500
+etc.....
+
+Be sure the file contains the history of the run, not just the last
+measurement.
+
+When you have completed all steps, you must write out the exact state of
+the system at the end of the run.  Specifically, write the array of
+spins to a file called "spins.dat".  To ensure that array is written in
+an expected order, follow this pseudo-code:
+
+  loop over x {
+    loop over y {
+      write spin[x][y] to the file
+    }
+  }
+
+Do not forget to #include the normal header files, and also declare the
+functions you will be using.
+
+Finally, be sure to follow instructions EXACTLY or else you will loose
+credit in the automated grading.
+
+
+
