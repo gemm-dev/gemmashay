@@ -260,7 +260,7 @@ h6 {
 
 .portfolio-item .caption .caption-content {
   color: #fff;
-  margin: auto auto auto;
+  margin: auto .5rem auto;
 }
 
 .portfolio-item .caption .caption-content h2 {
