@@ -260,7 +260,7 @@ h6 {
 
 .portfolio-item .caption .caption-content {
   color: #fff;
-  margin: 2rem 2rem 2rem;
+  margin: auto .5rem .5rem;
 }
 
 .portfolio-item .caption .caption-content h2 {
@@ -270,7 +270,7 @@ h6 {
 
 .portfolio-item .caption .caption-content p {
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 992px) {
