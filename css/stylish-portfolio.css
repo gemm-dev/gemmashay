@@ -131,7 +131,7 @@ h6 {
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #1D809F;
+  background: #000;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
