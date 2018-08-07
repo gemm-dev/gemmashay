@@ -1,12 +1,3 @@
-/*
-This code tests the functions and subroutines you have written
-associated with integrating the wquations of motions for N bodies
-interacting via gravitational forces.
-
-Compile and execute the same as the previous assignments.
-
-*/
-
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -76,15 +67,7 @@ int main(int argc, char **argv)
       if (N>NMAX || N<1) 
 	printf("Invalid number of objects; try again.\n");
     }
-    /*
-    mass = (double*) calloc(N, sizeof(double));
-    r = (double**) calloc(N, sizeof(double*));
-    v = (double**) calloc(N, sizeof(double*));
-    for (i=0; i<N; i++) {
-      r[i] = (double*) calloc(NDIM, sizeof(double));
-      v[i] = (double*) calloc(NDIM, sizeof(double));
-    }
-    */
+
     for (i=0; i<N; i++) {
       printf("\tObject %d mass:", i);
       scanf("%lf", &mass[i]);
@@ -103,7 +86,7 @@ int main(int argc, char **argv)
     }
   }
 
-  /* rescale coordinates to that the center of mass is fixed */
+  /* rescale coordinates so that the center of mass is fixed */
   printf("\nRescaling positions and velocities so that the\n");
   printf("center of mass is fixed at the origin\n");
   center_of_mass(N, mass, r, rcm);
@@ -128,12 +111,7 @@ int main(int argc, char **argv)
   scanf("%lf", &scale);
   n_per_draw = 100;
   n_draw = nsteps/100;
-  /*
-  printf("Number of time steps for each drawing of the trajectory: ");
-  scanf("%d", &n_per_draw);
-  printf("Number of times to draw: ");
-  scanf("%d", &n_draw);
-  */
+
   printf("\nINITIAL CONDITIONS:\n");
   center_of_mass(N, mass, r, rcm);
   center_of_mass(N, mass, v, vcm);
@@ -154,10 +132,7 @@ int main(int argc, char **argv)
     for (i=0; i<N; i++) 
       for (k=0; k<NDIM; k++)
 	rold[i][k] = r[i][k];
-
-    /*    if (answer=='e')
-      move_euler(N, mass, r, v, n_per_draw, dt);
-      else if (answer=='r')*/
+	  
     if (answer=='r')
       move_runge_kutta(N, mass, r, v, n_per_draw, dt);
     else if (answer=='v')
