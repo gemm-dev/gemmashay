@@ -1,19 +1,3 @@
-/*
-NOTE!  The code for all these function is really simple, even trivial.
-The main purpose of this part assignment is to develop some experience
-with function calls and with the notion of an external function.
-
-We want our functions to be general purpose functions that can calculate
-derivatives and integrals of any given function, passed to it from the
-calling program (note that it would not be very efficient to invoke a
-subroutine function for an operation as simple as calculating a numerical 
-derivative, but our goal here is only to exemplify some important features 
-of subroutine calls, not efficiency).  For this reason, our functions
-must contain the name (fn) of a generic function in their list of
-arguments.  fn is a dummy name that stands for whatever function is
-passed to the function subroutines by the calling program.  
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -66,7 +50,7 @@ double second_deriv(double (*fn)(double), double x, double delta)
 /* 
 trap_integrate function receives from the calling program the name fn of
 an external function program and the lower and upper limits of an
-integration domain, x0 and xn, and must return as it the approximation 
+integration domain, x0 and xn, and must return the approximation 
 to the integral of fn over the interval x0,xn given by the trapezoidal
 formula based on a subdivision of the interval of integration into n
 equal subintervals.
@@ -93,7 +77,7 @@ double trap_integrate(double (*fn)(double), double x0, double xn, int n)
 simpson_integrate function receives from the calling program the name fn of
 an external function program and the lower and upper limits of an
 integration domain, x0 and xn, and must return the approximation 
-to the integral of fn over the interval x0,xn given by Simpson's
+to the integral of fn over the interval x0, xn given by Simpson's
 formula based on a subdivision of the interval of integration into 
 2*n equal subintervals.
 */
