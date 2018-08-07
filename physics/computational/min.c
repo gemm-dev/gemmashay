@@ -1,18 +1,3 @@
-/* This code performs a 1-D search for a function minimum without using 
-   derivative information.  Specfically, we first crudely bracket the minimum
-   to the triplet of points a, b, c, where f(b)<f(a) and f(b)<f(c).  We then
-   use the 'golden section search' to find the root within some tolerance.
-
-   Note that the nature of the problem is such that a tolerence less than
-   sqrt(machine_precision/f(b)) is meaningless.  If the minmum is of order 1,
-   the minimum tolereance is 10^-8 (since double precision runs out at 16 
-   digits).
-
-   For many dimension, methods that use the derivative, particularly the 
-   conjugate gradient method, are useful.  See numerical recipes, where a 
-   subroutine is already provided.
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
